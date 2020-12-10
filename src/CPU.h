@@ -11,14 +11,14 @@ typedef struct Single_Reg_s
 {
 	// This define the cpu registers
 	// as a single 8-bit register.
-	char A;
-	char F;
-	char B;
-	char C;
-	char D;
-	char E;
-	char H;
-	char L;
+	unsigned char A;
+	unsigned char F;
+	unsigned char B;
+	unsigned char C;
+	unsigned char D;
+	unsigned char E;
+	unsigned char H;
+	unsigned char L;
 
 }Single_Reg_t;
 
@@ -35,11 +35,11 @@ typedef struct Pair_Reg_s
 
 typedef struct CPU_flags_s
 {
-	char RESERVED : 4;
-	char C        : 1;
-	char H        : 1;
-	char N        : 1;
-	char Z        : 1;
+	unsigned char RESERVED : 4;
+	unsigned char C        : 1;
+	unsigned char H        : 1;
+	unsigned char N        : 1;
+	unsigned char Z        : 1;
 
 }CPU_flags_t;
 
