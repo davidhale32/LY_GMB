@@ -55,9 +55,9 @@ typedef struct CPU_Register
 // CPU flags are defined here:
 	union CPU_flags_u
 	{
-		CPU_flags_t flags;
-		char        flag;  /*[7][6][5][4][3][2][1][0]*/
-		   	   	   	   	   /*[Z][N][H][C][0][0][0][0]*/
+		                      CPU_flags_t flags;
+		unsigned char flag;  /*[7][6][5][4][3][2][1][0]*/
+		   	   	   	   	    /*[Z][N][H][C][0][0][0][0]*/
 	}CPU_flags_t;
 
 	unsigned short int SP; /* stack pointer point to the current code on stack*/
@@ -69,5 +69,5 @@ typedef struct CPU_Register
 
 int RunCPU ();
 int Fetch ();
-int Decode(const char Opcode);
+int Decode(const unsigned char Opcode);
 int Execute();

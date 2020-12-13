@@ -27,9 +27,8 @@ int main (void)
 	// Initialize the first program counter
 	CHIP_8->PC = 0x0  ; // Here we have the bootROM
 	CHIP_8->SP = 0xFFF; // Stack pointer
-	CHIP_8->CPU_Regs_t.SingleReg.A = 0x99;
-
-
+	CHIP_8->CPU_Regs_t.SingleReg.A = 0x0F;
+	CHIP_8->CPU_Regs_t.SingleReg.B = 0x0B;
 
 
 
