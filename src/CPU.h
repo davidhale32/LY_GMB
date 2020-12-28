@@ -55,16 +55,19 @@ typedef struct CPU_Register
 // CPU flags are defined here:
 	union CPU_flags_u
 	{
-		                      CPU_flags_t flags;
-		unsigned char flag;  /*[7][6][5][4][3][2][1][0]*/
-		   	   	   	   	    /*[Z][N][H][C][0][0][0][0]*/
+		CPU_flags_t flags;
+		unsigned char flag;         /*[7][6][5][4][3][2][1][0]*/
+		   	   	   	   	            /*[Z][N][H][C][0][0][0][0]*/
 	}CPU_flags_t;
 
 	unsigned short int SP; /* stack pointer point to the current code on stack*/
 	unsigned short int PC; /* program counter point to the next command to execute*/
 
+	bool_t IME;            /*interrupt master enable flop*/
+
 	// Hold the CPU state
 	bool_t CPU_is_On;
+
 }CPU_Registers;
 
 int RunCPU ();
